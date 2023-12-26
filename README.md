@@ -17,17 +17,12 @@ For this project, I work with the Reacher environment.
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
-**Diserete State Space (33)**  
+**Discrete State Space (33)**  
 The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. 
 
 **(Continuous Action Space)**  
 Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
-## Solving the Environment
-
-In this project, I choose the first version, which is the "single agent approach" by using **DDPG (Deep Determministic Policy Gradient)** to solave the environment.
-Instaed of doing this on my local environment, I use Udacity Worksapce to complete the project.
-The environment is considered solved by reach average 30+ score within 1000 epoches.
 
 ## Environment Setup
 
@@ -59,3 +54,14 @@ Then, place the file in the p2_continuous-control/ folder in the DRLND GitHub re
 
 **Step 3: Explore the Environment**  
 After you have followed the instructions above, open Continuous_Control.ipynb (located in the p2_continuous-control/ folder in the DRLND GitHub repository) and follow the instructions to learn how to use the Python API to control the agent.
+
+
+
+## Solving the Environment  
+In this project, I chose the first version, which is the "single agent approach" by using **DDPG (Deep Determministic Policy Gradient)** to solve the environment.
+Instaed of doing this on my local environment, I used Udacity Worksapce to complete the project.
+The environment is considered solved by reach average 30+ score within 1000 epoches.
+
+## Instructions
+Open the **Continuous_Control.ipynb** and go through each cell to download the dependicies and train the model. Please note that **step 3 - Take Random Actions in the Environment** is for infomration only, which can be skipped.
+
