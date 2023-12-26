@@ -12,3 +12,5 @@ In this course, you will use Unity's rich environments to design, train, and eva
 Note: The Unity ML-Agent team frequently releases updated versions of their environment. We are using the v0.4 interface. To avoid any confusion, please use the workspace we provide here or work with v0.4 locally.
 
 For this project, I work with the Reacher environment.
+
+![Unity_Reacher_Env](https://github.com/Ryan-ZL-Lin/RLND-Continuous_Control/assets/33056320/b6a17b34-4bd4-44c9-a863-db0b9b4893c9)
