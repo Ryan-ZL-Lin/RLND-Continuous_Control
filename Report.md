@@ -21,6 +21,9 @@ Although DDPG is claimed as an Actor-Critic approach in the paper, however, it a
 ## Soft Update Strategy
 Unlike DQN where the Target Network weights are updates only every 10K timesteps (a big update after a certain time), DDPG uses Soft Update that updates the Target Network weights gradually (every timestep) by mixing the Regualr Network weights (99.99%) to the Target Network weights (0.01%).  
 
+## Ornstein-Uhlenbeck process
+In Actor Regular Network, a noise is introduced when predciting the best belived action. I noticed that the original implementation in [Udacity Repository HERE](https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-pendulum/ddpg_agent.py) is not in the right way. Initially, the learning progress went too slow (3 score after 500 epoches) by using the original implementation. Afterwards, I changed it to use standard normal distrubution by using action size and achieved 30+ within 502 epoches, please refer to ddpg_agent.py for further details.
+
 # Hyper Parameters
 | Parameter | Value | Context | Description | 
 | -------- | -------- | -------- | -------- |
