@@ -32,3 +32,15 @@ Unlike DQN where the Target Network weights are updates only every 10K timesteps
 | LR_CRITIC | 1e-3 | Critic | Learning rate of the Critic |
 | WEIGHT_DECAY | 0 | Critic | L2 weight decay used in Critic optimizer | 
 | UPDATE_EVERY | 20 | Both Actor and Critic | The time steps that the actor and critic networks use to update the Target Network weights |
+
+
+# Plot of Rewards
+I choose the **Single Agent** approach to solve the environment to reach 30+ scores within 502 epoches. Here is the plot: 
+<img width="488" alt="Round2 Training Result" src="https://github.com/Ryan-ZL-Lin/RLND-Continuous_Control/assets/33056320/81c9a02f-2a2e-4eb7-8151-541e0e3ab5b5">
+
+The checkpoints are saved in **checkpoint_actor_single.pth** and **checkpoint_critic_single.pth** for both Actor and Critic model accordingly.
+
+# Ideas for Furture Works
+- To solve the environment by using **20 Agents** approach.
+- To solve the environment by using [PPO(Proximal Policy Optimization)](https://arxiv.org/abs/1707.06347).
+
