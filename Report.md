@@ -18,5 +18,16 @@ State (33) -------> Fully Connected Layer 1 (400 + 33 units) -------> Fully Conn
 Although DDPG is claimed as an Actor-Critic approach in the paper, however, it also looks like DQN method because the **Reply Buffer** is used.
 
 **Soft Update Strategy**  
-Unlike DQN where the Target Network weights are updates only every 10K timesteps (a big update after a certain time), DDPG uses Soft Update that updates the Target Network weights gradually (every timestep) by blending the Regualr Network weights (99.99%) with Target Network weights (0.01%)
+Unlike DQN where the Target Network weights are updates only every 10K timesteps (a big update after a certain time), DDPG uses Soft Update that updates the Target Network weights gradually (every timestep) by mixing the Regualr Network weights (99.99%) to the Target Network weights (0.01%).
 
+# Hyper Parameters
+| Parameter | Value | Context | Description | 
+| -------- | -------- | -------- | -------- |
+| BUFFER_SIZE | 1e6 | Reply Buffer | Reply Buffer size |
+| BATCH_SIZE  | 1024 | Reply Buffer | The size of collected experience that us enough to start using Reply buffer for learning |
+| GAMMA | 0.99 | Critic | Discount factor | 
+| TAU | 1e-3 | Both Actor and Critic | For soft update of target parameters | 
+| LR_ACTOR | 1e-3 | Actor | Learning rate of the Actor |
+| LR_CRITIC | 1e-3 | Critic | Learning rate of the Critic |
+| WEIGHT_DECAY | 0 | Critic | L2 weight decay used in Critic optimizer | 
+| UPDATE_EVERY | 20 | Both Actor and Critic | The time steps that the actor and critic networks use to update the Target Network weights |
